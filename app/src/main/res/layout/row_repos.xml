@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/white"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="@dimen/_7sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_7sdp"
+        app:cardElevation="@dimen/_7sdp"
+        app:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <ImageView
+                android:id="@+id/iv_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_select"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/profile_image"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/circularstd_bold"
+                        android:gravity="start"
+                        android:text="@string/name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/circularstd_medium"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/circularstd_bold"
+                        android:gravity="start"
+                        android:text="@string/repositry"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_repo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/circularstd_medium"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/circularstd_bold"
+                        android:gravity="start"
+                        android:text="@string/rank"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_rank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/circularstd_medium"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

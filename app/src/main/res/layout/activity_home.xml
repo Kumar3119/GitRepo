@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="homeVM"
+            type="com.love.githubrepo.ui.home.HomeViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@color/purple_700">
+            <androidx.appcompat.widget.Toolbar
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:contentInsetEnd="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:fontFamily="@font/circularstd_bold"
+                        android:text="@string/app_name"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/repo_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:textCursorDrawable="@null"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@null" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_balance_List"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_repos" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>
+
+
+
+
